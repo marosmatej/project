@@ -26,19 +26,23 @@ void loop() {
         leftMotorSpeed = 100; // Example speed values, adjust as needed
         rightMotorSpeed = 100;
         digitalWrite(LED_BUILTIN, LOW);
+        Serial.println("F");
         break;
       case 'B':
         leftMotorSpeed = -100; // Example speed values, adjust as needed
         rightMotorSpeed = -100;
         digitalWrite(LED_BUILTIN, HIGH);
+        Serial.println("F");
         break;
       case 'L':
         leftMotorSpeed = 80; // Example speed values, adjust as needed
         rightMotorSpeed = 120;
+        Serial.println("F");
         break;
       case 'R':
         leftMotorSpeed = 120; // Example speed values, adjust as needed
         rightMotorSpeed = 80;
+        Serial.println("F");
         break;
       default:
         leftMotorSpeed = 0;
