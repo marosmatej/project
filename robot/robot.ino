@@ -2,6 +2,7 @@
 
 SoftwareSerial BTSerial(2, 3); // RX, TX pins for Bluetooth communication
 
+
 int leftMotorSpeed = 0;
 int rightMotorSpeed = 0;
 
@@ -9,7 +10,11 @@ void setup() {
   Serial.begin(9600); // Start serial communication
   BTSerial.begin(9600); // Start Bluetooth serial communication
   // Initialize motor control pins or any other necessary setup
+  
+  // test
+  pinMode(LED_BUILTIN, OUTPUT);
 }
+
 
 void loop() {
   if (BTSerial.available()) {
@@ -20,10 +25,12 @@ void loop() {
       case 'F':
         leftMotorSpeed = 100; // Example speed values, adjust as needed
         rightMotorSpeed = 100;
+        digitalWrite(LED_BUILTIN, LOW);
         break;
       case 'B':
         leftMotorSpeed = -100; // Example speed values, adjust as needed
         rightMotorSpeed = -100;
+        digitalWrite(LED_BUILTIN, HIGH);
         break;
       case 'L':
         leftMotorSpeed = 80; // Example speed values, adjust as needed

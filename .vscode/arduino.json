@@ -1,4 +1,5 @@
 {
     "board": "arduino:avr:uno",
-    "sketch": "robot\\robot.ino"
+    "sketch": "robot\\robot.ino",
+    "port": "COM8"
 }
