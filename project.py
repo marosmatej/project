@@ -2,7 +2,7 @@ import serial
 import time
 
 # Define COM port for communication
-bluetooth_port = 'COM3'
+bluetooth_port = "/dev/tty.HC-06"
 
 
 # Establish serial communication
